@@ -49,5 +49,14 @@ public class Bee : MonoBehaviour
             }
             
         }
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.CompareTag("Player");
+        
+            
+
+        
     }
 }

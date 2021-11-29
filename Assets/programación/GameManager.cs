@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,7 +10,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject gameOverMenu;
     [SerializeField] GameObject Felicitacion1;
     [SerializeField]int conteo;
+    [SerializeField] Text tiempo;
     public megaman vida;
+    float contador;
+    float num;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +24,24 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        contadorTiempo();
         PauseGame();
         perder();
+    }
+    void contadorTiempo()
+    {
+        contador += Time.deltaTime;
+        if (contador >= 1f)
+        {
+            num++;
+            tiempo.text = num.ToString();
+            contador = 0;
+        }
+        if (num >= 500f)
+        {
+
+            SceneManager.LoadScene(1);
+        }
     }
     void perder()
     {

@@ -26,5 +26,13 @@ public class BalaDeCanon : MonoBehaviour
 
         //Recomiendo que tengas las colisiones entre los enemigos desactivadas para que no se borre al instante.
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+            
+        }
+    }
 
 }
