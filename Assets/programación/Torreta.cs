@@ -12,7 +12,8 @@ public class Torreta : MonoBehaviour
     [SerializeField] private Transform puntoA;
     [SerializeField] private Transform puntoB;
     [SerializeField] GameObject Cuerpo;
-    [SerializeField] float vida;
+    [SerializeField] public float vida;
+    [SerializeField] GameManager gm;
     public float daño = 1;
     int conteoDeDaño;
 
@@ -49,10 +50,12 @@ public class Torreta : MonoBehaviour
                 muerte();
                 Destroy(GetComponent<CircleCollider2D>());
                 Destroy(gameObject, 1f);
+                gm.contE();
             }
 
         }
     }
+
     public void TomarDaño(float daño)
     {
         vida -= daño;

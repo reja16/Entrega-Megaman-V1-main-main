@@ -6,7 +6,8 @@ using Pathfinding;
 public class Bee : MonoBehaviour
 {
     public AIPath aiPath;
-    [SerializeField] int vida;
+    [SerializeField] public int vida;
+    [SerializeField] GameManager gm;
     int conteoDeDaño;
 
     Animator bee_animator;
@@ -43,9 +44,10 @@ public class Bee : MonoBehaviour
 
             if (conteoDeDaño == vida)
             {
-            bee_animator.SetTrigger("Destroy");
-            Destroy(GetComponent<CircleCollider2D>());
-            Destroy(gameObject, 1f);
+                bee_animator.SetTrigger("Destroy");
+                Destroy(GetComponent<CircleCollider2D>());
+                Destroy(gameObject, 1f);
+                gm.contE();
             }
             
         }

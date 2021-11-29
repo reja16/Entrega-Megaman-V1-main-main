@@ -8,8 +8,8 @@ public class Canon : MonoBehaviour
     [SerializeField] GameObject balader;
     public Transform ubicaciondecanon;
     [SerializeField] GameObject destructordelobjeto;
-
-    [SerializeField] int vida;
+    [SerializeField] GameManager gm;
+    [SerializeField] public int vida;
     int conteoDeDaño;
 
     //en public Transform ubicaciondecanon se tiene que poner el sprite del cañon PUESTO EN LA ESCENA, el cual definira la salida de la bala
@@ -73,6 +73,7 @@ public class Canon : MonoBehaviour
                 m_animator.SetTrigger("Destroy");
                 Destroy(GetComponent<BoxCollider2D>());
                 Destroy(gameObject, 1f);
+                gm.contE();
             }
 
         }

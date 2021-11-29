@@ -8,10 +8,13 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject gameOverMenu;
-    [SerializeField] GameObject Felicitacion1;
-    [SerializeField]int conteo;
+    [SerializeField] GameObject Ganar;
+    [SerializeField] int conteo;
     [SerializeField] Text tiempo;
+    
+    
     public megaman vida;
+    
     float contador;
     float num;
     // Start is called before the first frame update
@@ -27,6 +30,19 @@ public class GameManager : MonoBehaviour
         contadorTiempo();
         PauseGame();
         perder();
+    }
+    public void contE()
+    {
+        conteo = conteo - 1;
+        if (conteo < 1 )
+        {
+            ganar();
+        }
+    }
+    
+    void ganar()
+    {
+        Ganar.SetActive(true);
     }
     void contadorTiempo()
     {

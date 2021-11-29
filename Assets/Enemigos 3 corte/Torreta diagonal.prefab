@@ -147,4 +147,5 @@ MonoBehaviour:
   balader: {fileID: 2769005953720325276, guid: edfad9c63fe236942bf0eb35a592b0c8, type: 3}
   ubicaciondecanon: {fileID: 8583089072298677388}
   destructordelobjeto: {fileID: 1077764512820115984, guid: b7fc5185eee9b0c4ba7aa520d3381297, type: 3}
+  gm: {fileID: 3609664726266794300, guid: 8f1157d45a9351547b15dee716ee534a, type: 3}
   vida: 3

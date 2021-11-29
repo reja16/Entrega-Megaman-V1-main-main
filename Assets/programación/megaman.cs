@@ -61,6 +61,24 @@ public class megaman : MonoBehaviour
             
         }
     }
+
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+      //  GameObject objeto = collision.gameObject;
+
+       // string bala = objeto.tag;
+
+        //if (objeto.tag == "bala")
+            //{
+           // vida -= daño;
+            //if (vida <= 0)
+            //{
+               // Destroy(this.gameObject);
+            //}
+
+
+        //}
+    //}
     public void TomarDaño(float daño)
     {
         vida -= daño;
